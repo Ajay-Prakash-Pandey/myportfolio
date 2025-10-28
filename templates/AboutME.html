@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ajay's Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/footer.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/aboutme.css') }}">
+</head>
+
+<body>
+
+    
+{% include 'includes/navbar.html' %} 
+
+  <section>
+    <div class="intro">
+      <h1>Hi there, I'm</h1>
+      <p>Ajay Prakash Pandey</p>
+    </div>
+  </section>
+  <section>
+    <div class="resume">
+      <h1>My Resume</h1>
+      <div class="content">
+        <p>
+          I have knowledge in web development and AI. I have been working for 2 years in web development <br>
+          and have 4 years of Java knowledge along with 1 year of Python development experience. <br>
+          I have a strong foundation in HTML, CSS, and JavaScript,<br>
+          and I am proficient in various frameworks and libraries.
+        </p>
+
+        <div class="buttons">
+          <div class="button"><a href="{{ url_for('contact') }}"><button>Tap to see my contact me</button></a></div>
+          <div class="button"><a href="{{ url_for('skills') }}"><button>Tap to see my Skills</button></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'includes/footer.html' %}
+
+</html>

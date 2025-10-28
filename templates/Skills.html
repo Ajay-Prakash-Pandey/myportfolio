@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Skills - Ajay</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Skill.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/footer.css') }}">
+</head>
+
+<body>
+
+    {% include 'includes/navbar.html' %}
+
+    <section class="skills-section">
+        <h1>My Skills</h1>
+
+        <div class="skill">
+            <h3>Python</h3>
+            <div class="bar">
+                <div class="progress" style="width: 85%;">85%</div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>HTML & CSS</h3>
+            <div class="bar">
+                <div class="progress" style="width: 80%;">90%</div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="bar">
+                <div class="progress" style="width: 65%;">50%</div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>PHP</h3>
+            <div class="bar">
+                <div class="progress" style="width: 60%;">60%</div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <h3>Debugging & Clean Code</h3>
+            <div class="bar">
+                <div class="progress" style="width: 75%;">80%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Java</h3>
+            <div class="bar">
+                <div class="progress" style="width: 75%;">85%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>MYSQL</h3>
+            <div class="bar">
+                <div class="progress" style="width: 75%;">85%</div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+
+    <script src="{{ url_for('static', filename='JavaScript/skill.js') }}"></script>
+</body>
+
+</html>

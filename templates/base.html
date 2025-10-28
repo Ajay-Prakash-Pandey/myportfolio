@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ajay's Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/footer.css') }}">
+    {% if session.get('logged_in') %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/admin.css') }}">
+    {% endif %}
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% if session.get('logged_in') %}
+        {% include 'includes/adminnav.html' %}
+    {% else %}
+        {% include 'includes/navbar.html' %}
+    {% endif %}
+
+    {% include 'includes/messages.html' %}
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Ajay's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/register.css') }}">
+</head>
+<body>
+    {% include 'includes/messages.html' %}
+    <form method="post" action="{{ url_for('register') }}">
+    <div class="signin"> 
+
+    <div class="content"> 
+
+     <h2>Registartion</h2> 
+
+
+      <div class="inputBox"> 
+
+       <input type="text" name="uname" required> <i>Username</i> 
+
+      </div> 
+      <div class="inputBox"> 
+
+       <input type="email" name="email" required> <i>email</i> 
+
+      </div> 
+
+      <div class="inputBox"> 
+
+       <input type="password" name="password" required> <i>Password</i> 
+
+      </div> 
+      <div class="links">
+        <a href="{{ url_for('login') }}">Login</a>
+      </div>
+
+      <div class="inputBox">
+        <input type="submit" value="Sign Up">
+      </div>
+
+    </div>
+  </div>
+</div>
+</form>
+</body>
+</html>

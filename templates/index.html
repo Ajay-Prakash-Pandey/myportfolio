@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Components/Css/footer.css') }}">
+</head>
+
+<body>
+    
+{% include 'includes/navbar.html' %}
+
+    <section>
+        <div class="home">
+            <div class="hero-content">
+                <p>
+                    I am Web developer <br>
+                    and AI Aspirant <br>
+                </p>
+            </div>
+
+    </section>
+
+    <section>
+        <div class="second-page">
+            <p>I Have been practicing web development since last 2 years and 4 years of java knowledge 1 year of python
+                development experience <br>
+                I have a strong foundation in HTML, CSS, and JavaScript, and I am proficient in various frameworks
+                and libraries.<br>
+                I have worked on various projects, including e-commerce websites, blogs, and personal portfolios.
+                <br>
+                My goal is to create user-friendly and responsive websites that provide a great user experience.
+                <br>
+                I am always looking for new challenges and opportunities to grow as a developer. <br>
+            </p>
+            <div class="buttons">
+                <div class="button"><a href="{{ url_for('about') }}"><button>Tap to see my Portfolio</button></a></div>
+                <div class="button"><a href="{{ url_for('contact') }}"><button>Tap to see my contact me</button></a></div>
+                <div class="button"><a href="{{ url_for('skills') }}"><button>Tap to see my Skills</button></a></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="third-page">
+            <p>where Knowledge and Experience do something innovative for your work</p>
+        </div>
+    </section>
+    {% include 'includes/footer.html' %}
+    <script src="{{ url_for('static', filename='JavaScript/skill.js') }}"></script>
+</body>
+
+</html>

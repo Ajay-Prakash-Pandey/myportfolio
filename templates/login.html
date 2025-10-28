@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Ajay's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+    {% include 'includes/messages.html' %}
+    <form method="post" action="{{ url_for('login_post') }}">
+    <div class="signin">
+
+    <div class="content"> 
+
+     <h2>logIn</h2> 
+
+     <div class="form"> 
+
+      <div class="inputBox"> 
+
+       <input type="text" name="uname" required> <i>Username</i> 
+
+      </div> 
+
+      <div class="inputBox"> 
+
+       <input type="password" name="password" required> <i>Password</i> 
+
+      </div> 
+
+      <div class="links">
+        <a href="#">Forgot Password</a>
+        <a href="{{ url_for('register') }}">Register</a>
+      </div>
+
+      <div class="inputBox">
+        <input type="submit" value="Login">
+      </div>
+
+    </div>
+  </div>
+</div>
+</form>
+</body>
+</html>

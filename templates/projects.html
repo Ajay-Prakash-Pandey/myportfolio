@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+
+{% block title %}Projects - {{ super() }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/display.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="projects-container">
+  <table style="color:black;">
+    <tr>
+      <th>Project Name</th>
+      <th>Project Link</th>
+      <th>Description</th>
+    </tr>
+
+
+    {% if projects %}
+      {% for project in projects %}
+      <tr>
+        <td>{{ project[1] }}</td>
+        <td><a href="{{ project[2] }}" target="_blank" rel="noopener noreferrer">View Project</a></td>
+        <td>{{ project[3] }}</td>
+      </tr>
+      {% endfor %}
+    {% else %}
+      <tr>
+        <td colspan="3">No projects found.</td>
+      </tr>
+    {% endif %}
+  </table>
+</div>
+{% endblock %}

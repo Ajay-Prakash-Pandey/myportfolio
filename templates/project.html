@@ -1,0 +1,36 @@
+
+{% extends "admin_base.html" %}
+
+{% block title %}Add Project - {{ super() }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/project.css') }}">
+{% endblock %}
+
+{% block admin_content %}
+<div class="main">
+  <div class="c1">
+    <form method="post" action="{{ url_for('add_project') }}">
+      <div class="project">
+        <div class="content">
+          <h2>Add Project</h2>
+          <div class="form">
+            <div class="inputBox">
+              <input type="text" name="pname" required> <i>Project Name</i>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="projectlink" required> <i>Project Link</i>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="projectDescripton" required> <i>Project Description</i>
+            </div>
+            <div class="inputBox">
+              <input type="submit" value="Submit">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

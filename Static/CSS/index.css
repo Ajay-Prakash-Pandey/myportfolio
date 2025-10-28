@@ -1,0 +1,142 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Animation */
+.hero-content p {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 60px auto;
+    animation: fadeUp 1.8s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Second Page Text Animation */
+.second-page {
+    padding: 40px 20px;
+    animation: fadeSlideIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+.second-page p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeSlideIn {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Buttons with Animation */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: floatPulse 3s infinite;
+}
+
+.button button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@keyframes floatPulse {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Third Page Animation */
+.third-page p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 40px;
+    animation: zoomIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Footer Animation */
+.footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    animation: fadeFooter 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeFooter {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.socialmedia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social a {
+    color: #0dcaf0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #5af5ff;
+}
